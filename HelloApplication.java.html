@@ -1,0 +1,312 @@
+<html>
+<head>
+<title>HelloApplication.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HelloApplication.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">demo6</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">application</span><span class="s2">.</span><span class="s1">Application</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">geometry</span><span class="s2">.</span><span class="s1">Pos</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">Scene</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.</span><span class="s1">Button</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.</span><span class="s1">ScrollPane</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.</span><span class="s1">Label</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">image</span><span class="s2">.</span><span class="s1">Image</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">image</span><span class="s2">.</span><span class="s1">ImageView</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">HBox</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">Region</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">VBox</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">Font</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">Text</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">paint</span><span class="s2">.</span><span class="s1">Color</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">TextAlignment</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">stage</span><span class="s2">.</span><span class="s1">Stage</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">HelloApplication</span>
+        <span class="s0">extends </span><span class="s1">Application </span><span class="s2">{</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">start</span><span class="s2">(</span><span class="s1">Stage primaryStage</span><span class="s2">) {</span>
+        <span class="s3">// Tạo header với menu</span>
+        <span class="s1">HBox header </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">();</span>
+        <span class="s1">header</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: white; -fx-padding: 10px 50px;&quot;</span><span class="s2">);</span>
+        <span class="s1">header</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">30</span><span class="s2">);</span>
+        <span class="s1">header</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER_LEFT</span><span class="s2">);</span>
+        <span class="s1">header</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">70</span><span class="s2">);</span>
+
+        <span class="s1">Label logo </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s4">&quot;Sài Gòn Xanh&quot;</span><span class="s2">);</span>
+        <span class="s1">logo</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">24</span><span class="s2">));</span>
+        <span class="s1">logo</span><span class="s2">.</span><span class="s1">setTextFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">GREEN</span><span class="s2">);</span>
+        <span class="s1">logo</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-weight: bold;&quot;</span><span class="s2">);</span>
+
+        <span class="s1">HBox menu </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">(</span>
+                <span class="s1">createMenuLabel</span><span class="s2">(</span><span class="s4">&quot;PLACE&quot;</span><span class="s2">),</span>
+                <span class="s1">createMenuLabel</span><span class="s2">(</span><span class="s4">&quot;ABOUT US&quot;</span><span class="s2">),</span>
+                <span class="s1">createMenuLabel</span><span class="s2">(</span><span class="s4">&quot;COLLABORATION&quot;</span><span class="s2">),</span>
+                <span class="s1">createMenuLabel</span><span class="s2">(</span><span class="s4">&quot;PROJECT&quot;</span><span class="s2">),</span>
+                <span class="s1">createMenuLabel</span><span class="s2">(</span><span class="s4">&quot;CONTACT US&quot;</span><span class="s2">)</span>
+        <span class="s2">);</span>
+        <span class="s1">menu</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">50</span><span class="s2">);</span>
+        <span class="s1">menu</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+        <span class="s1">Button donateButton </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s4">&quot;QUYÊN GÓP&quot;</span><span class="s2">);</span>
+        <span class="s1">donateButton</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">16</span><span class="s2">));</span>
+        <span class="s1">donateButton</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: black; -fx-text-fill: white; -fx-padding: 10px 20px;&quot;</span><span class="s2">);</span>
+        <span class="s1">donateButton</span><span class="s2">.</span><span class="s1">setPrefWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">donateButton</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">40</span><span class="s2">);</span>
+
+        <span class="s1">Region spacer </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Region</span><span class="s2">();</span>
+        <span class="s1">spacer</span><span class="s2">.</span><span class="s1">setPrefWidth</span><span class="s2">(</span><span class="s5">100</span><span class="s2">);</span>
+        <span class="s1">header</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">logo</span><span class="s2">, </span><span class="s1">spacer</span><span class="s2">, </span><span class="s1">menu</span><span class="s2">, </span><span class="s1">donateButton</span><span class="s2">);</span>
+
+        <span class="s3">// Khai báo VBox làm bố cục chính với 5 phần theo chiều dọc</span>
+        <span class="s1">VBox root </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">();</span>
+
+        <span class="s3">// Thêm header vào root</span>
+        <span class="s1">root</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">header</span><span class="s2">);</span>
+
+        <span class="s3">// Phần 1: Nền đen, chữ trắng</span>
+        <span class="s1">VBox blackSection </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">();</span>
+        <span class="s1">blackSection</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: black; -fx-padding: 20px;&quot;</span><span class="s2">);</span>
+        <span class="s1">blackSection</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">blackSection</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">400</span><span class="s2">);</span>
+
+        <span class="s1">Text blackText </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;MỖI NĂM VIỆT NAM THẢI RA MÔI TRƯỜNG 1,8 TRIỆU TẤN RÁC THẢI NHỰA</span><span class="s0">\n</span><span class="s4">&quot; </span><span class="s2">+</span>
+                <span class="s4">&quot; </span><span class="s0">\n</span><span class="s4">&quot; </span><span class="s2">+</span>
+                        <span class="s4">&quot;Trung bình, mỗi hộ gia đình Việt Nam sử dụng khoảng một kg túi nylon mỗi tháng. Hơn 80% trong số đó đều bị thải bỏ sau khi dùng một lần&quot;</span><span class="s2">);</span>
+        <span class="s1">blackText</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">blackText</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">36</span><span class="s2">));</span>
+        <span class="s1">blackText</span><span class="s2">.</span><span class="s1">setWrappingWidth</span><span class="s2">(</span><span class="s5">1000</span><span class="s2">);</span>
+        <span class="s1">blackText</span><span class="s2">.</span><span class="s1">setTextAlignment</span><span class="s2">(</span><span class="s1">TextAlignment</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">); </span><span class="s3">// Căn giữa nội dung văn bản</span>
+
+        <span class="s1">blackSection</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">blackText</span><span class="s2">);</span>
+
+        <span class="s3">// Phần 2: Nền xanh, chữ trắng và 3 ảnh trên một hàng ngang</span>
+        <span class="s1">VBox greenSection1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">();</span>
+        <span class="s1">greenSection1</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: green; -fx-padding: 30px;&quot;</span><span class="s2">);</span>
+        <span class="s1">greenSection1</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">greenSection1</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">800</span><span class="s2">);</span>
+        <span class="s1">greenSection1</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">50</span><span class="s2">); </span><span class="s3">// Thêm khoảng cách giữa các phần tử</span>
+
+        <span class="s1">Text greenText1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;THỰC TRẠNG Ô NHIỄM KÊNH, RẠCH, SÔNG NGÒI&quot;</span><span class="s2">);</span>
+        <span class="s1">greenText1</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">greenText1</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">36</span><span class="s2">));</span>
+        <span class="s1">greenText1</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-weight: bold;&quot;</span><span class="s2">);</span>
+
+<span class="s3">// Tạo HBox để chứa 3 ảnh</span>
+        <span class="s1">HBox imageRow </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">();</span>
+        <span class="s1">imageRow</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">40</span><span class="s2">); </span><span class="s3">// Khoảng cách giữa các ảnh</span>
+        <span class="s1">imageRow</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+<span class="s3">// Tạo 3 ImageView với kích cỡ giống nhau</span>
+        <span class="s1">ImageView image21 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://moitruongxaydungvn.vn/uploads/images/Qu%C3%BD%202-2023/1-%20%C3%B4%20nhi%E1%BB%85m%20ngu%E1%BB%93n%20nuoc%20%E1%BB%9F%20TP%20HCM-jpg.png&quot;</span><span class="s2">));</span>
+        <span class="s1">image21</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">450</span><span class="s2">);</span>
+        <span class="s1">image21</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">500</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image22 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://moitruonghopnhat.com/upload/default/images/tin-tuc/kenh%20nuoc%20den%20tai%20hcm.jpg&quot;</span><span class="s2">));</span>
+        <span class="s1">image22</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">450</span><span class="s2">);</span>
+        <span class="s1">image22</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">500</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image23 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://file1.dangcongsan.vn/data/0/images/2021/10/19/vanphong/o-nhiem-nguon-nuoc-o-viet-nam.jpg?w=400&quot;</span><span class="s2">));</span>
+        <span class="s1">image23</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">450</span><span class="s2">);</span>
+        <span class="s1">image23</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">500</span><span class="s2">);</span>
+
+<span class="s3">// Thêm các ảnh vào HBox</span>
+        <span class="s1">imageRow</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">image21</span><span class="s2">, </span><span class="s1">image22</span><span class="s2">, </span><span class="s1">image23</span><span class="s2">);</span>
+
+<span class="s3">// Thêm văn bản và HBox ảnh vào VBox</span>
+        <span class="s1">greenSection1</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">greenText1</span><span class="s2">, </span><span class="s1">imageRow</span><span class="s2">);</span>
+
+
+        <span class="s3">// Phần 3: Nền trắng, chữ xanh và ảnh</span>
+        <span class="s1">VBox whiteSection </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">();</span>
+        <span class="s1">whiteSection</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: white; -fx-padding: 50px;&quot;</span><span class="s2">);</span>
+        <span class="s1">whiteSection</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">whiteSection</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">800</span><span class="s2">);</span>
+        <span class="s1">whiteSection</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">50</span><span class="s2">); </span><span class="s3">// Thêm khoảng cách giữa các phần tử</span>
+
+        <span class="s1">Text whiteText </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;THỰC TRẠNG BÃI TẬP KẾT RÁC TỰ PHÁT&quot;</span><span class="s2">);</span>
+        <span class="s1">whiteText</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">GREEN</span><span class="s2">);</span>
+        <span class="s1">whiteText</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">36</span><span class="s2">));</span>
+        <span class="s1">whiteText</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-weight: bold;&quot;</span><span class="s2">);</span>
+
+        <span class="s3">// Tạo HBox để chứa 2 ảnh</span>
+        <span class="s1">HBox imageRow2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">();</span>
+        <span class="s1">imageRow2</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">40</span><span class="s2">); </span><span class="s3">// Khoảng cách giữa các ảnh</span>
+        <span class="s1">imageRow2</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image31 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://nld.mediacdn.vn/2020/2/6/img-0815-15809522823181242191242.jpg&quot;</span><span class="s2">));</span>
+        <span class="s1">image31</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">650</span><span class="s2">);</span>
+        <span class="s1">image31</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">550</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image32 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://cdnphoto.dantri.com.vn/cfexvuakEKsYuHq7ngev9k8SxsI=/zoom/1200_630/2021/11/19/hon-1000-ho-dan-o-tp-thu-duc-kho-so-vi-bai-rac-lo-thien-7-crop-1637308013589.jpeg&quot;</span><span class="s2">));</span>
+        <span class="s1">image32</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">650</span><span class="s2">);</span>
+        <span class="s1">image32</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">550</span><span class="s2">);</span>
+
+        <span class="s3">// Thêm các ảnh vào HBox</span>
+        <span class="s1">imageRow2</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">image31</span><span class="s2">, </span><span class="s1">image32</span><span class="s2">);</span>
+
+<span class="s3">// Thêm văn bản và HBox ảnh vào VBox</span>
+        <span class="s1">whiteSection</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">whiteText</span><span class="s2">, </span><span class="s1">imageRow2</span><span class="s2">);</span>
+
+
+        <span class="s3">// Phần 4: Nền là hình ảnh, văn bản với 2 size chữ</span>
+        <span class="s1">VBox blueSection2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">();</span>
+        <span class="s1">blueSection2</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-padding: 50px;&quot;</span><span class="s2">); </span><span class="s3">// Xóa nền màu, sử dụng hình ảnh</span>
+        <span class="s1">blueSection2</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">blueSection2</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">900</span><span class="s2">);</span>
+        <span class="s1">blueSection2</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">50</span><span class="s2">); </span><span class="s3">// Thêm khoảng cách giữa các phần tử</span>
+
+<span class="s3">// Thêm hình ảnh nền</span>
+        <span class="s1">String imageUrl </span><span class="s2">= </span><span class="s4">&quot;https://giadinh.mediacdn.vn/296230595582509056/2022/12/12/screenshot-2022-12-10-232441-16706906074412043607614-1670738857625-16707388579171229917212-1670809868546-16708098687651816772723.png&quot;</span><span class="s2">; </span><span class="s3">// Đường dẫn tới ảnh</span>
+        <span class="s1">blueSection2</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-image: url('&quot; </span><span class="s2">+ </span><span class="s1">imageUrl </span><span class="s2">+ </span><span class="s4">&quot;'); &quot; </span><span class="s2">+</span>
+                <span class="s4">&quot;-fx-background-size: cover; &quot; </span><span class="s2">+</span>
+                <span class="s4">&quot;-fx-background-position: center;&quot;</span><span class="s2">);</span>
+
+
+<span class="s3">// Văn bản với hai kích thước</span>
+        <span class="s1">Text titleText </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;CHIẾN LƯỢC LÀM SẠCH&quot;</span><span class="s2">);</span>
+        <span class="s1">titleText</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">titleText</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">46</span><span class="s2">));</span>
+        <span class="s1">titleText</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-weight: bold;&quot;</span><span class="s2">);</span>
+
+        <span class="s1">Text descriptionText </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chúng ta đang đối mặt với một cuộc chiến chống lại ô nhiễm môi trường.</span><span class="s0">\n</span><span class="s4">&quot; </span><span class="s2">+</span>
+                <span class="s4">&quot;Để giải quyết vấn đề này một cách hiệu quả, chúng tôi đã xác định các điểm nóng ô nhiễm thông qua dữ liệu được đóng góp bởi người dùng. Chúng tôi kêu gọi sự giúp sức của cộng đồng để chung tay giải quyết điểm nóng rác thải.</span><span class="s0">\n</span><span class="s4">&quot; </span><span class="s2">+</span>
+                <span class="s4">&quot;Bằng cách đăng ký tham gia các hoạt động dọn dẹp, bạn sẽ góp phần trực tiếp vào việc làm sạch môi trường sống của chúng ta&quot;</span><span class="s2">);</span>
+        <span class="s1">descriptionText</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">descriptionText</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">40</span><span class="s2">));</span>
+        <span class="s1">descriptionText</span><span class="s2">.</span><span class="s1">setTextAlignment</span><span class="s2">(</span><span class="s1">TextAlignment</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">descriptionText</span><span class="s2">.</span><span class="s1">setWrappingWidth</span><span class="s2">(</span><span class="s5">800</span><span class="s2">);</span>
+
+<span class="s3">// Thêm tất cả vào blueSection2</span>
+        <span class="s1">blueSection2</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">titleText</span><span class="s2">, </span><span class="s1">descriptionText</span><span class="s2">);</span>
+
+
+        <span class="s3">// Phần 5: Nền xanh, chữ trắng và 6 ảnh (2 hàng, mỗi hàng 3 ảnh) với chú thích</span>
+        <span class="s1">VBox quytrinhlamsach </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">();</span>
+        <span class="s1">quytrinhlamsach</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-background-color: green; -fx-padding: 50px;&quot;</span><span class="s2">);</span>
+        <span class="s1">quytrinhlamsach</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">quytrinhlamsach</span><span class="s2">.</span><span class="s1">setPrefHeight</span><span class="s2">(</span><span class="s5">400</span><span class="s2">); </span><span class="s3">// Tăng chiều cao nếu cần</span>
+
+<span class="s3">// Tiêu đề</span>
+        <span class="s1">Text QTLStext </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;QUY TRÌNH LÀM SẠCH&quot;</span><span class="s2">);</span>
+        <span class="s1">QTLStext</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">QTLStext</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">36</span><span class="s2">));</span>
+        <span class="s1">QTLStext</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-weight: bold;&quot;</span><span class="s2">);</span>
+
+<span class="s3">// Tạo HBox cho mỗi hàng ảnh</span>
+        <span class="s1">HBox row1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">();</span>
+        <span class="s1">row1</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">20</span><span class="s2">);</span>
+        <span class="s1">row1</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+        <span class="s1">HBox row2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">();</span>
+        <span class="s1">row2</span><span class="s2">.</span><span class="s1">setSpacing</span><span class="s2">(</span><span class="s5">20</span><span class="s2">);</span>
+        <span class="s1">row2</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+<span class="s3">// Thêm ảnh và chú thích vào từng hàng</span>
+        <span class="s1">ImageView image1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://via.placeholder.com/150&quot;</span><span class="s2">));</span>
+        <span class="s1">image1</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">image1</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">Text caption1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chú thích 1&quot;</span><span class="s2">);</span>
+        <span class="s1">caption1</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">caption1</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 14px; -fx-text-alignment: center;&quot;</span><span class="s2">);</span>
+        <span class="s1">VBox imageWithCaption1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s1">image1</span><span class="s2">, </span><span class="s1">caption1</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://via.placeholder.com/150&quot;</span><span class="s2">));</span>
+        <span class="s1">image2</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">image2</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">Text caption2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chú thích 2&quot;</span><span class="s2">);</span>
+        <span class="s1">caption2</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">caption2</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 14px; -fx-text-alignment: center;&quot;</span><span class="s2">);</span>
+        <span class="s1">VBox imageWithCaption2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s1">image2</span><span class="s2">, </span><span class="s1">caption2</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://via.placeholder.com/150&quot;</span><span class="s2">));</span>
+        <span class="s1">image3</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">image3</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">Text caption3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chú thích 3&quot;</span><span class="s2">);</span>
+        <span class="s1">caption3</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">caption3</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 14px; -fx-text-alignment: center;&quot;</span><span class="s2">);</span>
+        <span class="s1">VBox imageWithCaption3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s1">image3</span><span class="s2">, </span><span class="s1">caption3</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image4 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://via.placeholder.com/150&quot;</span><span class="s2">));</span>
+        <span class="s1">image4</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">image4</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">Text caption4 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chú thích 4&quot;</span><span class="s2">);</span>
+        <span class="s1">caption4</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">caption4</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 14px; -fx-text-alignment: center;&quot;</span><span class="s2">);</span>
+        <span class="s1">VBox imageWithCaption4 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s1">image4</span><span class="s2">, </span><span class="s1">caption4</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image5 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://via.placeholder.com/150&quot;</span><span class="s2">));</span>
+        <span class="s1">image5</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">image5</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">Text caption5 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chú thích 5&quot;</span><span class="s2">);</span>
+        <span class="s1">caption5</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">caption5</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 14px; -fx-text-alignment: center;&quot;</span><span class="s2">);</span>
+        <span class="s1">VBox imageWithCaption5 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s1">image5</span><span class="s2">, </span><span class="s1">caption5</span><span class="s2">);</span>
+
+        <span class="s1">ImageView image6 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageView</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Image</span><span class="s2">(</span><span class="s4">&quot;https://via.placeholder.com/150&quot;</span><span class="s2">));</span>
+        <span class="s1">image6</span><span class="s2">.</span><span class="s1">setFitWidth</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">image6</span><span class="s2">.</span><span class="s1">setFitHeight</span><span class="s2">(</span><span class="s5">150</span><span class="s2">);</span>
+        <span class="s1">Text caption6 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s4">&quot;Chú thích 6&quot;</span><span class="s2">);</span>
+        <span class="s1">caption6</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">caption6</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-font-size: 14px; -fx-text-alignment: center;&quot;</span><span class="s2">);</span>
+        <span class="s1">VBox imageWithCaption6 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">VBox</span><span class="s2">(</span><span class="s1">image6</span><span class="s2">, </span><span class="s1">caption6</span><span class="s2">);</span>
+
+<span class="s3">// Thêm các ảnh vào hàng tương ứng</span>
+        <span class="s1">row1</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">imageWithCaption1</span><span class="s2">, </span><span class="s1">imageWithCaption2</span><span class="s2">, </span><span class="s1">imageWithCaption3</span><span class="s2">);</span>
+        <span class="s1">row2</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">imageWithCaption4</span><span class="s2">, </span><span class="s1">imageWithCaption5</span><span class="s2">, </span><span class="s1">imageWithCaption6</span><span class="s2">);</span>
+
+<span class="s3">// Thêm tiêu đề và các hàng ảnh vào VBox chính</span>
+        <span class="s1">quytrinhlamsach</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">QTLStext</span><span class="s2">, </span><span class="s1">row1</span><span class="s2">, </span><span class="s1">row2</span><span class="s2">);</span>
+
+<span class="s3">// Thêm phần 5 vào root</span>
+        <span class="s1">root</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">quytrinhlamsach</span><span class="s2">);</span>
+
+
+        <span class="s3">// Thêm tất cả các phần vào root</span>
+        <span class="s1">root</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s1">blackSection</span><span class="s2">, </span><span class="s1">greenSection1</span><span class="s2">, </span><span class="s1">whiteSection</span><span class="s2">, </span><span class="s1">blueSection2</span><span class="s2">, </span><span class="s1">quytrinhlamsach</span><span class="s2">);</span>
+
+        <span class="s3">// Bọc VBox bằng ScrollPane để có thể cuộn</span>
+        <span class="s1">ScrollPane scrollPane </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ScrollPane</span><span class="s2">();</span>
+        <span class="s1">scrollPane</span><span class="s2">.</span><span class="s1">setContent</span><span class="s2">(</span><span class="s1">root</span><span class="s2">);</span>
+        <span class="s1">scrollPane</span><span class="s2">.</span><span class="s1">setFitToWidth</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+
+        <span class="s3">// Tạo Scene và hiển thị</span>
+        <span class="s1">Scene scene </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scene</span><span class="s2">(</span><span class="s1">scrollPane</span><span class="s2">, </span><span class="s5">800</span><span class="s2">, </span><span class="s5">600</span><span class="s2">);</span>
+        <span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s4">&quot;Giao diện 5 phần&quot;</span><span class="s2">);</span>
+        <span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">scene</span><span class="s2">);</span>
+        <span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">show</span><span class="s2">();</span>
+    <span class="s2">}</span>
+    <span class="s3">// In đậm chữ PLACE</span>
+    <span class="s0">private </span><span class="s1">Label createMenuLabel</span><span class="s2">(</span><span class="s1">String text</span><span class="s2">) {</span>
+        <span class="s1">Label label </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s1">text</span><span class="s2">);</span>
+        <span class="s1">label</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s4">&quot;Arial&quot;</span><span class="s2">, </span><span class="s5">18</span><span class="s2">));</span>
+        <span class="s1">label</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-text-fill: black;&quot;</span><span class="s2">);</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">text</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s4">&quot;PLACE&quot;</span><span class="s2">)) {</span>
+            <span class="s1">label</span><span class="s2">.</span><span class="s1">setStyle</span><span class="s2">(</span><span class="s4">&quot;-fx-text-fill: black; -fx-font-weight: bold; -fx-text-transform: uppercase;&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">label</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">launch</span><span class="s2">(</span><span class="s1">args</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
