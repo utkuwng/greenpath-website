@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>run.sh</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4; font-weight: bold;}
+.s1 { color: #bcbec4;}
+.s2 { color: #7a7e85;}
+.s3 { color: #6aab73;}
+.s4 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+run.sh</font>
+</center></td></tr></table>
+<pre><span class="s0">#!/bin/bash</span>
+
+<span class="s2"># Đường dẫn đến thư mục chứa JavaFX SDK</span>
+<span class="s1">JAVA_FX_LIB=</span><span class="s3">&quot;/Users/utkuwng/Downloads/javafx-sdk-23.0.1/lib&quot;</span>
+
+<span class="s2"># Đường dẫn đến tệp JAR của ứng dụng</span>
+<span class="s1">JAR_FILE=</span><span class="s3">&quot;/Users/utkuwng/Documents/LTUD/ltud/out/artifacts/demo4_jar/demo4.jar&quot;</span>
+
+<span class="s2"># Chạy ứng dụng với JavaFX</span>
+<span class="s1">java --module-path </span><span class="s4">$JAVA_FX_LIB </span><span class="s1">--add-modules javafx.controls,javafx.fxml -jar </span><span class="s4">$JAR_FILE</span>
+
+</pre>
+</body>
+</html>
