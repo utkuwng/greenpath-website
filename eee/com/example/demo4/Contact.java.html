@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Contact.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Contact.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">demo4</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">Connection</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">PreparedStatement</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">ResultSet</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">List</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Contact </span><span class="s2">{</span>
+
+    <span class="s0">public </span><span class="s1">Contact</span><span class="s2">(</span><span class="s1">String fullName</span><span class="s2">, </span><span class="s1">String birthDate</span><span class="s2">, </span><span class="s1">String phoneNumber</span><span class="s2">, </span><span class="s1">String address</span><span class="s2">, </span><span class="s1">String email</span><span class="s2">, </span><span class="s1">String message</span><span class="s2">) {</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Contact</span><span class="s2">&gt; </span><span class="s1">getAllContacts</span><span class="s2">() {</span>
+        <span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Contact</span><span class="s2">&gt; </span><span class="s1">contacts </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;();</span>
+        <span class="s1">String query </span><span class="s2">= </span><span class="s3">&quot;SELECT , birth_date, phone_number, address, email, message FROM contact&quot;</span><span class="s2">;</span>
+
+        <span class="s0">try </span><span class="s2">(</span><span class="s1">Connection connection </span><span class="s2">= </span><span class="s1">DBConnect</span><span class="s2">.</span><span class="s1">getConnection</span><span class="s2">();</span>
+             <span class="s1">PreparedStatement preparedStatement </span><span class="s2">= </span><span class="s1">connection</span><span class="s2">.</span><span class="s1">prepareStatement</span><span class="s2">(</span><span class="s1">query</span><span class="s2">)) {</span>
+
+            <span class="s1">ResultSet resultSet </span><span class="s2">= </span><span class="s1">preparedStatement</span><span class="s2">.</span><span class="s1">executeQuery</span><span class="s2">();</span>
+
+            <span class="s0">while </span><span class="s2">(</span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">next</span><span class="s2">()) {</span>
+                <span class="s1">String fullName </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">&quot;full_name&quot;</span><span class="s2">);</span>
+                <span class="s1">String birthDate </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">&quot;birth_date&quot;</span><span class="s2">);</span>
+                <span class="s1">String phoneNumber </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">&quot;phone_number&quot;</span><span class="s2">);</span>
+                <span class="s1">String address </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">&quot;address&quot;</span><span class="s2">);</span>
+                <span class="s1">String email </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">&quot;email&quot;</span><span class="s2">);</span>
+                <span class="s1">String message </span><span class="s2">= </span><span class="s1">resultSet</span><span class="s2">.</span><span class="s1">getString</span><span class="s2">(</span><span class="s3">&quot;message&quot;</span><span class="s2">);</span>
+
+                <span class="s1">contacts</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Contact</span><span class="s2">(</span><span class="s1">fullName</span><span class="s2">, </span><span class="s1">birthDate</span><span class="s2">, </span><span class="s1">phoneNumber</span><span class="s2">, </span><span class="s1">address</span><span class="s2">, </span><span class="s1">email</span><span class="s2">, </span><span class="s1">message</span><span class="s2">));</span>
+            <span class="s2">}</span>
+
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception e</span><span class="s2">) {</span>
+            <span class="s1">e</span><span class="s2">.</span><span class="s1">printStackTrace</span><span class="s2">();</span>
+        <span class="s2">}</span>
+
+        <span class="s0">return </span><span class="s1">contacts</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
